@@ -8,10 +8,14 @@ public class CheckingAccount extends BankAccount {
 
     @Override
     public double calculateInterest() {
-        return 0; // No interest for checking accounts
+        // Checking accounts typically have no interest
+        return 0;
     }
 
     public void payBills(double amount) {
+        if (amount > balance) {
+            throw new IllegalArgumentException("Insufficient funds to pay bills");
+        }
         withdraw(amount);
         System.out.println("Paid bill of " + amount);
     }
