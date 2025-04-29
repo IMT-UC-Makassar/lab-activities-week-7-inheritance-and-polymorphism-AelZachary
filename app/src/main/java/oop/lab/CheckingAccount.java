@@ -1,7 +1,6 @@
 package oop.lab;
 
 public class CheckingAccount extends BankAccount {
-    private static final double INTEREST_RATE = 0.01;
 
     public CheckingAccount(String accountNumber, String accountHolder, double balance) {
         super(accountNumber, accountHolder, balance);
